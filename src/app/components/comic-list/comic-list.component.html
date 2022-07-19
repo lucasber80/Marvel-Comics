@@ -1,10 +1,10 @@
-<div class="d-flex flex-column align-items-center">
-  <div class="content d-flex flex-row flex-wrap justify-content-center">
+<div class="content d-flex flex-column align-items-center">
+  <div class="d-flex flex-row flex-wrap justify-content-center">
     <div *ngFor="let item of comics" class="mr-4 ml-4">
       <app-comic-card [comic]="item"></app-comic-card>
     </div>
   </div>
   <div>
-    <button class="load-more mb-3" (click)="loadMoreComics()" [disabled]="disableLoadButton()">load more</button>
+    <button class="load-more mb-3" (click)="loadMoreComics()" [disabled]="disableLoadButton()">Load more</button>
   </div>
 </div>

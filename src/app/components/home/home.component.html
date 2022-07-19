@@ -1,13 +1,15 @@
-<div class="d-flex justify-content-center align-items-center content border border-primary">
-    <img class="background-img"src="../../../assets/images/back.png" alt="">
-  <div class="background d-flex flex-column align-items-center justify-content-center">
-    <div class="nav-width" style="width: 100%;">
-        <app-navbar></app-navbar>
+<div
+  class="content d-flex justify-content-center align-items-center content border border-primary"
+>
+  <div
+    class="background d-flex flex-column align-items-center justify-content-center"
+  >
+    <div class="nav-width" style="width: 100%">
+      <app-navbar></app-navbar>
     </div>
-    <div class="d-flex d-flex column justify-content-center">
-      <div *ngIf="isLoaded">
-        <app-comic-list></app-comic-list>
-      </div>
+
+    <div *ngIf="isLoaded">
+      <app-comic-list></app-comic-list>
     </div>
   </div>
 </div>

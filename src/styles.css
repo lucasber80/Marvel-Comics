@@ -3,3 +3,7 @@
 * {
     font-family: 'Roboto';
 }
+
+body {
+    background-image: url("./assets/images/back.png");
+}

@@ -1,6 +1,6 @@
+
 .background{
-    max-width: 1800px;
-    height: 100%;
+    max-width: 1500px;
     background-color: white;
 }
 
@@ -8,13 +8,3 @@
     width: 100%;
 }
 
-.content{
-    width: 100%;
-    
-}
-
-.background-img{
-    width: 100%;
-    position: absolute;
-    z-index: -1;
-}
