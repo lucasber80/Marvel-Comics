@@ -1,0 +1,21 @@
+.content{
+    max-width: 1200px;
+}
+
+.load-more{
+    background-color: transparent;
+    border: none;
+    border-bottom: white 1px solid;
+    color: white;
+    font-weight: 500;
+    font-size: larger;
+}
+
+.load-more:hover{
+    background-color: transparent;
+    border: none;
+    border-bottom: red 1px solid;
+    color: red;
+    font-weight: 500;
+    font-size: larger;
+}

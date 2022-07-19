@@ -1,0 +1,39 @@
+.thumb img{
+    width: 240px;
+    height: 300px;
+}
+
+.div-title{
+    height: 80px;
+}
+.title{
+    font-weight: 500;
+    font-size: medium;
+    overflow-y: hidden;
+}
+
+.creators{
+    font-weight: 500;
+    font-size: small;
+   
+}
+
+.comic-button{
+    width: 250px;
+    height: 450px;
+    border: none;
+    background-color: transparent;
+    text-align: start;
+    overflow-y:hidden;
+
+}
+
+.comic-button:hover {
+    width: 250px;
+    height: 450px;
+    border: none;
+    background-color: transparent;
+    text-align: start;
+    overflow-y: hidden;
+    color: red;
+}

@@ -8,9 +8,23 @@ import { Comic } from 'src/app/models/comic';
 })
 export class ComicCardComponent implements OnInit {
   @Input() comic!: Comic;
+
   constructor() {}
 
+  returnCreatorsNames(): string {
+    let stringCreators = '';
+    let creators = this.comic.creators;
+    if (creators) {
+      for (var i = 0; i < creators.length; i++) {
+        stringCreators += creators[i].name;
+        if (i != creators.length - 1 && i != 1) stringCreators += ', ';
+        if (i == 1) break;
+      }
+    }
+    return stringCreators;
+  }
+
   ngOnInit(): void {
-    console.log(this.comic)
+    console.log(this.returnCreatorsNames());
   }
 }

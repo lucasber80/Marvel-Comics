@@ -1,1 +1,9 @@
-
+<button class="comic-button">
+  <div class="d-flex flex-column thumb">
+    <img class="shadow-lg" src="{{ comic.thumbnail }}" alt="" />
+    <div class="div-title d-flex flex-column">
+      <span class="title mt-3">{{ comic.title }}</span>
+      <span class="creators">{{ returnCreatorsNames() }}</span>
+    </div>
+  </div>
+</button>

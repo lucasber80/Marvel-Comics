@@ -2,14 +2,17 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Md5 } from 'ts-md5/dist/md5';
+import { Comic } from '../models/comic';
 @Injectable({
   providedIn: 'root',
 })
 export class ComicService {
-  
+
   constructor(private http: HttpClient) {}
 
   apiUrl = environment.base_url;
+  comics:Comic[]=[]
+  comicsView:Comic[]=[]
 
   makeAuthorization(): string {
     const md5 = new Md5();
@@ -21,11 +24,15 @@ export class ComicService {
     return queryParams;
   }
 
+  loadMore(){
+
+  }
+
   getCharacters() {
     return this.http.get(this.apiUrl + 'characters' + this.makeAuthorization());
   }
 
   getComics() {
-    return this.http.get(this.apiUrl + 'comics' + this.makeAuthorization());
+    return this.http.get(this.apiUrl + 'comics' + this.makeAuthorization() + "&limit=18" );
   }
 }
