@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { DialogService } from 'primeng/dynamicdialog';
 import { Comic } from 'src/app/models/comic';
 
 @Component({
@@ -24,7 +25,7 @@ export class ComicCardComponent implements OnInit {
     return stringCreators;
   }
 
-  ngOnInit(): void {
-    console.log(this.returnCreatorsNames());
-  }
+ 
+
+  ngOnInit(): void {}
 }

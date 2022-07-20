@@ -1,5 +1,6 @@
 <div
-  class="content d-flex justify-content-center align-items-center content border border-primary"
+  class="content d-flex justify-content-center align-items-center content"
+  *ngIf="isLoaded"
 >
   <div
     class="background d-flex flex-column align-items-center justify-content-center"
@@ -8,8 +9,6 @@
       <app-navbar></app-navbar>
     </div>
 
-    <div *ngIf="isLoaded">
-      <app-comic-list></app-comic-list>
-    </div>
+    <app-comic-list></app-comic-list>
   </div>
 </div>

@@ -18,11 +18,12 @@ export class HomeComponent implements OnInit {
     this.comicService.getComics().subscribe({
       next: (data: any) => {
         let allComics = data['data']['results'];
+        
 
         allComics.forEach((element: any) => {
           let comic = new Comic();
           let creators = element['creators']['items'];
-
+          comic.id = element['id']
           comic.title = element['title'] ?? '';
           comic.description = element['description'] ?? '';
           comic.thumbnail =

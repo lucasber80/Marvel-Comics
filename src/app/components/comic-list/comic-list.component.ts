@@ -11,10 +11,10 @@ export class ComicListComponent implements OnInit {
   constructor(private comicService: ComicService) {}
 
   comics?: Comic[];
-  cont = 16;
+  cont = 25;
 
   loadMoreComics() {
-    this.cont += 8;
+    this.cont += 10;
     this.comics = this.comics = this.comicService.comics.slice(0, this.cont);
   }
 
@@ -25,6 +25,6 @@ export class ComicListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.comics = this.comicService.comics.slice(0, 16);
+    this.comics = this.comicService.comics.slice(0, this.cont);
   }
 }
