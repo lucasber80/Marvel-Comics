@@ -14,6 +14,9 @@ export class ComicService {
   comics:Comic[]=[]
   comicsView:Comic[]=[]
 
+  loadModal = false
+  selectedComic = new Comic()
+
   makeAuthorization(): string {
     const md5 = new Md5();
     let privateKey = environment.private_key;
@@ -33,6 +36,6 @@ export class ComicService {
   }
 
   getComics() {
-    return this.http.get(this.apiUrl + 'comics' + this.makeAuthorization() + "&limit=20" );
+    return this.http.get(this.apiUrl + 'comics' + this.makeAuthorization() + "&limit=100" );
   }
 }

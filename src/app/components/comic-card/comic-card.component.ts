@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { DialogService } from 'primeng/dynamicdialog';
 import { Comic } from 'src/app/models/comic';
+import { ComicService } from 'src/app/services/comic.service';
 
 @Component({
   selector: 'app-comic-card',
@@ -10,7 +10,7 @@ import { Comic } from 'src/app/models/comic';
 export class ComicCardComponent implements OnInit {
   @Input() comic!: Comic;
 
-  constructor() {}
+  constructor(public comicService:ComicService) {}
 
   returnCreatorsNames(): string {
     let stringCreators = '';
@@ -25,7 +25,12 @@ export class ComicCardComponent implements OnInit {
     return stringCreators;
   }
 
- 
+ openModal(){
+  this.comicService.loadModal = false;
+  setTimeout(()=>{this.comicService.loadModal = true;},200)
+  this.comicService.selectedComic = this.comic
+  
+ }
 
   ngOnInit(): void {}
 }

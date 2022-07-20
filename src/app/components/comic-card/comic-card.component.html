@@ -1,4 +1,9 @@
-<button class="comic-button" >
+<button
+  class="comic-button"
+  data-bs-toggle="modal"
+  data-bs-target="#comic-dialog"
+  (click)="openModal()"
+>
   <div class="d-flex flex-column thumb">
     <img class="comic-img" src="{{ comic.thumbnail }}" alt="" />
     <div class="div-title d-flex flex-column">
@@ -8,12 +13,4 @@
   </div>
 </button>
 
-<div class="modal fade" id="pokemon-dialog" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-xl">
-    <div class="modal-content">
-      <div class="modal-body">
-        <app-comic-dialog></app-comic-dialog>
-      </div>
-    </div>
-  </div>
-</div>
+

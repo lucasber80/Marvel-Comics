@@ -8,3 +8,16 @@
     <button class="load-more mb-3" (click)="loadMoreComics()" [disabled]="disableLoadButton()">Load more</button>
   </div>
 </div>
+
+<div class="modal fade" id="comic-dialog" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div *ngIf="comicService.loadModal">
+          <app-comic-dialog></app-comic-dialog>
+          <!-- <google-map></google-map> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

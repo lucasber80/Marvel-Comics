@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Comic } from 'src/app/models/comic';
 import { ComicService } from 'src/app/services/comic.service';
 
@@ -8,7 +8,7 @@ import { ComicService } from 'src/app/services/comic.service';
   styleUrls: ['./comic-list.component.css'],
 })
 export class ComicListComponent implements OnInit {
-  constructor(private comicService: ComicService) {}
+  constructor(public comicService: ComicService) {}
 
   comics?: Comic[];
   cont = 25;

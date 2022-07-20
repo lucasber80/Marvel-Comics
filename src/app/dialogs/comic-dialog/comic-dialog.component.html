@@ -1,6 +1,27 @@
-
-  <div class="d-flex flex-row border border-primary">
-    <div class="col-6"></div>
-    <div class="col-6"></div>
+<div class="d-flex flex-row justify-content-end">
+  <button class="close-button" data-bs-dismiss="modal">
+    <i class="bi bi-x"></i>
+  </button>
+</div>
+<div
+  class="content d-flex flex-row flex-wrap justify-content-between align-items-end pl-2 pr-2"
+>
+  <div>
+    <img class="comic-img" src="{{ comic.thumbnail }}" alt="" />
   </div>
 
+  <div class="d-flex flex-column justify-content-between description-column">
+    <div class="">
+      <span class="title">{{ comic.title }}</span>
+    </div>
+    <div>
+      <div class="d-flex flex-column">
+        <span class="label">Writers</span>
+        <span class="label-data">{{writers}}</span>
+      </div>
+    </div>
+    <div class="description">
+      <span>{{ comic.description }}</span>
+    </div>
+  </div>
+</div>

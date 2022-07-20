@@ -6,16 +6,18 @@ import { HomeComponent } from './components/home/home.component';
 import { ComicCardComponent } from './components/comic-card/comic-card.component';
 import { ComicListComponent } from './components/comic-list/comic-list.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { DynamicDialogModule } from 'primeng/dynamicdialog';
 import { ComicDialogComponent } from './dialogs/comic-dialog/comic-dialog.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { GoogleMapsModule } from '@angular/google-maps';
+
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpClientModule,
-    DynamicDialogModule,
     BrowserAnimationsModule,
+    GoogleMapsModule,
+   
   ],
   declarations: [
     AppComponent,

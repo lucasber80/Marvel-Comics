@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Comic } from 'src/app/models/comic';
+import { ComicService } from 'src/app/services/comic.service';
 
 @Component({
   selector: 'app-comic-dialog',
@@ -7,7 +8,33 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./comic-dialog.component.css'],
 })
 export class ComicDialogComponent implements OnInit {
-  constructor() {}
+  constructor(private comicService: ComicService) {}
+  comic!: Comic;
+  writers!: string;
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.comic = this.comicService.selectedComic;
+    this.writers = this.returnWriters();
+  }
+
+  returnWriters(): string {
+    let text = '';
+    let creators = this.comic.creators;
+    let cont = 0
+    
+    for (var i = 0; i < creators.length; i++) {
+      if (creators[i].role?.includes('writer')) {
+        cont++
+        text += creators[i].name + ', ';
+      }
+    }
+    let index = text.lastIndexOf(',');
+
+    if (index == text.length - 2) {
+      text = text.slice(0, text.length - 2);
+    }
+
+    if (cont == 0) return 'N/A';
+    return text;
+  }
 }
