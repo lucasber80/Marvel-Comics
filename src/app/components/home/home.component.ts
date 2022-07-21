@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MessageService } from 'primeng/api';
 import { Comic } from 'src/app/models/comic';
 import { Creator } from 'src/app/models/creator';
 import { ComicService } from 'src/app/services/comic.service';
@@ -7,10 +8,11 @@ import { ComicService } from 'src/app/services/comic.service';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
+  providers: [MessageService],
 })
 export class HomeComponent implements OnInit {
   constructor(public comicService: ComicService) {}
-  
+
   isLoaded?: boolean;
 
   ngOnInit(): void {
@@ -18,12 +20,12 @@ export class HomeComponent implements OnInit {
     this.comicService.getComics().subscribe({
       next: (data: any) => {
         let allComics = data['data']['results'];
-        console.log(allComics)
+        console.log(allComics);
 
         allComics.forEach((element: any) => {
           let comic = new Comic();
           let creators = element['creators']['items'];
-          comic.id = element['id']
+          comic.id = element['id'];
           comic.title = element['title'] ?? '';
           comic.description = element['description'] ?? '';
           comic.thumbnail =

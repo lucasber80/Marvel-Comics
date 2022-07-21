@@ -19,3 +19,11 @@
     max-width: 100%;
     height: 500px;
 }
+
+
+.confirm-button  {
+    width: 100%;
+}
+.confirm-button button{
+    width: 200px;
+}
