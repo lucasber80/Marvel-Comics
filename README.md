@@ -6,6 +6,10 @@ Projeto feito para teste de seleção da empresa Brisanet Telecom.
 
 O projeto consiste na criação de uma Single Page Application com uma listagem de HQ's da marvel, no qual apresentam informações extras ao clicar.
 
+## 📚 Funcionalidades
+
+## 🔧 Tecnologias utilizadas
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
