@@ -2,7 +2,7 @@
 
 Projeto feito para teste de seleção da empresa Brisanet Telecom.
 
-## Descrição
+## 📝 Descrição
 
 O projeto consiste na criação de uma Single Page Application com uma listagem de HQ's da marvel, no qual apresentam informações extras ao clicar.
 
