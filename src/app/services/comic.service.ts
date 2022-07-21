@@ -36,6 +36,6 @@ export class ComicService {
   }
 
   getComics() {
-    return this.http.get(this.apiUrl + 'comics' + this.makeAuthorization() + "&limit=100" );
+    return this.http.get(this.apiUrl + 'comics' + this.makeAuthorization() + "&limit=100/" );
   }
 }

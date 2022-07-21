@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
     this.comicService.getComics().subscribe({
       next: (data: any) => {
         let allComics = data['data']['results'];
-        console.log(allComics);
+      
 
         allComics.forEach((element: any) => {
           let comic = new Comic();

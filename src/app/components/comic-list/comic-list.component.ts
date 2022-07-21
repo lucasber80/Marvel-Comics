@@ -58,6 +58,6 @@ export class ComicListComponent implements OnInit {
       position: event.latLng,
       map: this.map,
     });
-    console.log();
+    
   }
 }
