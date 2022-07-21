@@ -1,16 +1,25 @@
-<button
-  class="comic-button"
-  data-bs-toggle="modal"
-  data-bs-target="#comic-dialog"
-  (click)="openModal()"
->
+<div class="content">
+  <div class="d-flex justify-content-end map-button">
+    <button>
+      <i
+        class="bi bi-bag"
+        data-bs-toggle="modal"
+        data-bs-target="#map-dialog"
+      ></i>
+    </button>
+  </div>
   <div class="d-flex flex-column thumb">
     <img class="comic-img" src="{{ comic.thumbnail }}" alt="" />
-    <div class="div-title d-flex flex-column">
-      <span class="title mt-3">{{ comic.title }}</span>
-      <span class="creators">{{ returnCreatorsNames() }}</span>
-    </div>
+    <button
+      class="comic-button"
+      data-bs-toggle="modal"
+      data-bs-target="#comic-dialog"
+      (click)="openModal()"
+    >
+      <div class="div-title d-flex flex-column">
+        <span class="title mt-3">{{ comic.title }}</span>
+        <span class="creators">{{ returnCreatorsNames() }}</span>
+      </div>
+    </button>
   </div>
-</button>
-
-
+</div>

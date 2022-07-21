@@ -19,36 +19,46 @@
 }
 
 .comic-button{
+    border: none;
+    background-color: transparent;text-align: start;
+}
+
+.content{
     width: 250px;
     height: 450px;
-    border: none;
-    background-color: transparent;
-    text-align: start;
-    overflow-y:hidden;
-
+    overflow-y: hidden;
+    
 }
 
 .comic-button img{
     box-shadow:10px 10px 5px lightgray;
-
+    text-align: start;
 }
 
 .comic-button:hover {
-    width: 250px;
-    height: 450px;
     border: none;
     background-color: transparent;
-    text-align: start;
-    overflow-y: hidden;
     color: red;
 }
 
-.modal-con{
-    
-}
+
 
 .modal-img{
     width: 300px;
     height: 400px;
-    
+}
+
+.map-button{
+    position: absolute;
+    width: 240px;
+    opacity: 80%; 
+}
+
+.map-button button{
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; 
+    z-index: 2;
+    background-color: lightgray;
 }

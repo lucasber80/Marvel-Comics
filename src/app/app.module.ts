@@ -9,7 +9,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ComicDialogComponent } from './dialogs/comic-dialog/comic-dialog.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GoogleMapsModule } from '@angular/google-maps';
-
+;
 
 @NgModule({
   imports: [
@@ -17,7 +17,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
     HttpClientModule,
     BrowserAnimationsModule,
     GoogleMapsModule,
-   
+  
   ],
   declarations: [
     AppComponent,
