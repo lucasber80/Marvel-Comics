@@ -2,6 +2,8 @@
 
 Projeto feito para teste de seleção da empresa Brisanet Telecom.
 
+https://lucasber80.github.io/Marvel-Comics/
+
 ## 📝 Descrição
 
 O projeto consiste na criação de uma Single Page Application com uma listagem de HQ's da marvel, no qual apresentam informações extras ao clicar.
