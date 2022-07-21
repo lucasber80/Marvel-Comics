@@ -18,7 +18,7 @@ O projeto consiste na criação de uma Single Page Application com uma listagem 
   <li>![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)</li>
 </ul>
 
-
+[NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 
 
 
